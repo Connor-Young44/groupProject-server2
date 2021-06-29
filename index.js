@@ -1,10 +1,21 @@
-require('dotenv').config()
-const express = require("express")
-const port = 4000
+require("dotenv").config();
 
-const app = express()
-app.use(express.json())
+const express = require("express");
 
+const usersRouter = require("./routers/users.js");
+const moviesRouter = require("./routers/movies.js");
 
+const port = 4000;
 
-app.listen(port,() => console.log(`server listening on ${port}`))
+const app = express();
+
+app.use(express.json());
+
+app.use("/users", usersRouter);
+app.use("/movies", moviesRouter);
+
+app.get("/", (req, res) => {
+  res.send("test reposne");
+});
+
+app.listen(port, () => console.log(`server listening on ${port}`));
