@@ -1,4 +1,5 @@
 require("dotenv").config();
+const corsMiddleWare = require("cors");
 
 const express = require("express");
 
@@ -8,6 +9,7 @@ const moviesRouter = require("./routers/movies.js");
 const port = 4000;
 
 const app = express();
+app.use(corsMiddleWare());
 
 app.use(express.json());
 

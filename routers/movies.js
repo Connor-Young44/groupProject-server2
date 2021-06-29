@@ -25,7 +25,7 @@ router.get("/:id", async (req, res) => {
   const userMovies = await Movie.findAll({
     where: { userId: userId },
   });
-  res.status(200).send({ message: "ok", userMovies });
+  res.status(200).send(userMovies);
 });
 
 router.patch("/:id", async (req, res) => {
