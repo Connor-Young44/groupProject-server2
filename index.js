@@ -6,7 +6,7 @@ const express = require("express");
 const usersRouter = require("./routers/users.js");
 const moviesRouter = require("./routers/movies.js");
 
-const port = 4000;
+const port = process.env.port || 4000;
 
 const app = express();
 app.use(corsMiddleWare());
