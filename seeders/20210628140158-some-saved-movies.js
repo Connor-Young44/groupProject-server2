@@ -1,21 +1,32 @@
-'use strict';
+"use strict";
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-   
-      await queryInterface.bulkInsert('movies', [{
-        title: 'test',
-       userId: 1,
-       isWatched: false,
-       createdAt: new Date(),
-       updatedAt: new Date()
-      }], {});
-    
+    await queryInterface.bulkInsert(
+      "movies",
+      [
+        {
+          title: "Mass Hysteria",
+          tmdbId: 592973,
+          userId: 1,
+          isWatched: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          title: "Who's there?",
+          tmdbId: 716931,
+          userId: 1,
+          isWatched: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+      ],
+      {}
+    );
   },
 
   down: async (queryInterface, Sequelize) => {
-    
-     await queryInterface.bulkDelete('movies', null, {});
-     
-  }
+    await queryInterface.bulkDelete("movies", null, {});
+  },
 };

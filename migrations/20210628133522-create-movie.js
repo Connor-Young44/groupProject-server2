@@ -20,6 +20,7 @@ module.exports = {
         onUpdate: "CASCADE",
         onDelete: "SET NULL",
       },
+      tmdbId: { type: Sequelize.INTEGER },
       isWatched: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
