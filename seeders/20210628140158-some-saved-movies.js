@@ -12,6 +12,7 @@ module.exports = {
           isWatched: false,
           createdAt: new Date(),
           updatedAt: new Date(),
+          type: "movie",
         },
         {
           title: "Who's there?",
@@ -20,6 +21,7 @@ module.exports = {
           isWatched: false,
           createdAt: new Date(),
           updatedAt: new Date(),
+          type: "movie",
         },
       ],
       {}

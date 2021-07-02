@@ -6,11 +6,13 @@ const router = new Router();
 
 router.post("/newMovie", async (req, res) => {
   console.log(req.body);
-  const { title, userId } = req.body;
+  const { title, userId, tmdbId, type } = req.body;
   const movie = await Movie.create({
     title: title,
     userId: userId,
     isWatched: false,
+    tmdbId: tmdbId,
+    type: type,
   });
   const userMovies = await Movie.findAll({
     where: { userId: userId },

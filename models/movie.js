@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       userId: DataTypes.INTEGER,
       tmdbId: DataTypes.INTEGER,
       isWatched: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
     },
     {
       sequelize,
